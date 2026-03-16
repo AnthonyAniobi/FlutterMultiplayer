@@ -1,0 +1,1 @@
+enum NetworkRole { host, client }
