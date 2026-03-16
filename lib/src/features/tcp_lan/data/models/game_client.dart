@@ -26,6 +26,7 @@ class GameClient {
     final buffer = StringBuffer();
 
     _socket!
+        .cast<List<int>>()
         .transform(utf8.decoder)
         .listen(
           (chunk) {

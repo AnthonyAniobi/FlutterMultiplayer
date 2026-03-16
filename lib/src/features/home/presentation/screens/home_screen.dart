@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_multiplayer/src/core/app_routes/app_routes.dart';
 import 'package:flutter_multiplayer/src/features/home/presentation/widgets/home_button.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -35,7 +36,9 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  void _tcpConnection() {}
+  void _tcpConnection() {
+    Navigator.of(context).pushNamed(AppRoutes.tcpLobby);
+  }
 
   void unimplemented() {
     showDialog(

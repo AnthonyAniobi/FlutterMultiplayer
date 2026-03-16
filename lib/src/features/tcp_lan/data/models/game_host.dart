@@ -49,6 +49,7 @@ class GameHost {
     final buffer = StringBuffer();
 
     socket
+        .cast<List<int>>()
         .transform(utf8.decoder)
         .listen(
           (chunk) {

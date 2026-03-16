@@ -8,6 +8,10 @@ class TcpLobbyScreen extends StatefulWidget {
 
   @override
   State<TcpLobbyScreen> createState() => _TcpLobbyScreenState();
+
+  static Route<dynamic> route(RouteSettings routeSettings) {
+    return MaterialPageRoute(builder: (context) => TcpLobbyScreen());
+  }
 }
 
 class _TcpLobbyScreenState extends State<TcpLobbyScreen> {
