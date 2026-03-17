@@ -26,6 +26,8 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             HomeButton(text: "TCP Connection", onPressed: _tcpConnection),
             SizedBox(height: 20),
+            HomeButton(text: "Web RTC", onPressed: _webRtcConnection),
+            SizedBox(height: 20),
             HomeButton(text: "Supabase Connection", onPressed: unimplemented),
             SizedBox(height: 20),
             HomeButton(text: "Firebase Connection", onPressed: unimplemented),
@@ -52,5 +54,9 @@ class _HomeScreenState extends State<HomeScreen> {
         );
       },
     );
+  }
+
+  void _webRtcConnection() {
+    Navigator.of(context).pushNamed(AppRoutes.tcpLobby);
   }
 }

@@ -6,6 +6,7 @@ class AppRoutes {
   static String currentRoute = home;
   static const home = '/';
   static const tcpLobby = '/tcp-lobby';
+  static const rtcLobby = '/rtc-lobby';
 
   // generate routes
   static Route<dynamic>? onGenerateRoute(RouteSettings routeSettings) {
@@ -13,6 +14,7 @@ class AppRoutes {
     return switch (routeSettings.name) {
       home => HomeScreen.route(routeSettings),
       tcpLobby => TcpLobbyScreen.route(routeSettings),
+      rtcLobby => TcpLobbyScreen.route(routeSettings),
       _ => MaterialPageRoute(builder: (_) => Container()),
     };
   }
